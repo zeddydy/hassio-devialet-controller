@@ -1,18 +1,27 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
-version: "1.1.0"
-slug: example
-description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+name: "Devialet Controller"
+description: "Control Devialet speaker via API"
+version: "1.0.0"
+slug: "devialet_controller"
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
+  - armhf
+  - armv7
   - i386
-init: false
+startup: before
+ports:
+  8000/tcp: 8000
+
+#ToRemove
 options:
-  message: "Hello world..."
+  beer: true
+  wine: true
+  liquor: false
+  name: "world"
+  year: 2017
 schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+  beer: bool
+  wine: bool
+  liquor: bool
+  name: str
+  year: int
