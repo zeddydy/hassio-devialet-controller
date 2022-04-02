@@ -1,6 +1,6 @@
 name: "Devialet Controller"
 description: "Control Devialet speaker via API"
-version: "1.0.0"
+version: "0.0.1"
 slug: "devialet_controller"
 arch:
   - aarch64
